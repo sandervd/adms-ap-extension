@@ -1,0 +1,22 @@
+@startuml
+entity Asset {
+  String Title
+  String Description
+  Date Issued
+  Date Modified
+}
+
+entity EIFAssetPerspective {
+  Recommendation Recommendation
+  URI Principles
+}
+
+entity EIRAAssetPerspective {
+  URI ABB
+}
+
+entity DevelopmentPerspective {
+  URI Git Repository link
+}
+
+@enduml

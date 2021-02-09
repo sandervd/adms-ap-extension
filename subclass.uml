@@ -1,0 +1,6 @@
+@startuml
+!include basedefinition.uml
+Asset <|-- EIFAssetPerspective
+Asset <|-- EIRAAssetPerspective
+Asset <|-- DevelopmentPerspective
+@enduml
