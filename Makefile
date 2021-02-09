@@ -1,9 +1,9 @@
-all: output/relatedentity.png output/subclass.png plantuml.jar
+all: out/relatedentity.png out/subclass.png
 
-output/relatedentity.png: relatedentity.uml basedefinition.uml
-	java -jar plantuml.jar relatedentity.uml output/relatedentity.png
-output/subclass.png: subclass.uml basedefinition.uml
-	java -jar plantuml.jar subclass.uml output/subclass.png
+out/relatedentity.png: plantuml.jar relatedentity.uml basedefinition.uml
+	java -jar plantuml.jar -o out relatedentity.uml 
+out/subclass.png: plantuml.jar subclass.uml basedefinition.uml
+	java -jar plantuml.jar -o out subclass.uml
 
 plantuml.jar:
 	curl -L http://sourceforge.net/projects/plantuml/files/plantuml.jar/download --output plantuml.jar
